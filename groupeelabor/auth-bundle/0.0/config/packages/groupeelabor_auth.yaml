@@ -1,0 +1,17 @@
+groupeelabor_auth:
+    user_class: App\Entity\Users
+    route:
+        login: login
+        redirect: login
+    priority:
+        db: '%env(int:AUTH_DB_PRIORITY)%'
+        ldap: '%env(int:AUTH_LDAP_PRIORITY)%'
+    ldap:
+        host: '%env(string:AUTH_LDAP_HOST)%'
+        port: '%env(int:AUTH_LDAP_PORT)%'
+        dn: '%env(string:AUTH_LDAP_BASE_DN)%'
+        user: '%env(string:AUTH_LDAP_USER)%'
+        password: '%env(string:AUTH_LDAP_PASSWORD)%'
+        query: '%env(string:AUTH_LDAP_QUERY_STRING)%'
+        default_role: '%env(string:AUTH_LDAP_DEFAULT_ROLE)%'
+        uid: '%env(string:AUTH_LDAP_UID_KEY)%'

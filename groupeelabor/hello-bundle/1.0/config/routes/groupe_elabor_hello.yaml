@@ -1,0 +1,3 @@
+groupe_elabor_hello:
+    resource: '@GroupeElaborHelloBundle/Controller/MainController.php'
+    type: annotation

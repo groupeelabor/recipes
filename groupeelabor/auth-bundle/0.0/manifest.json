@@ -1,0 +1,20 @@
+{
+    "bundles": {
+        "GroupeElabor\\AuthBundle\\GroupeElaborAuthBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AUTH_DB_PRIORITY": "1",
+        "AUTH_LDAP_PRIORITY": "2",
+        "AUTH_LDAP_HOST": "domain.fr",
+        "AUTH_LDAP_PORT": "389",
+        "AUTH_LDAP_QUERY_STRING": "(&(&(objectClass=user)(objectCategory=person)(SamAccountName={username})))",
+        "AUTH_LDAP_BASE_DN": "OU=Utilisateurs,DC=domain,DC=fr",
+        "AUTH_LDAP_USER": "ldap@domain.com",
+        "AUTH_LDAP_PASSWORD": "password",
+        "AUTH_LDAP_DEFAULT_ROLE": "ROLE_LDAP",
+        "AUTH_LDAP_UID_KEY": "sAMAccountName"
+    }
+}

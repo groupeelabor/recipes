@@ -1,0 +1,3 @@
+groupeelabor_auth:
+    resource: '@GroupeElaborAuthBundle/Resources/config/routes.xml'
+    prefix: '/auth'
